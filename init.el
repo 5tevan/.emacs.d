@@ -168,7 +168,11 @@
     (error (message "Invalid expression")
            (insert (current-kill 0)))))
 
+;; Evaluate inline elisp
 (global-set-key (kbd "C-c C-e") 'eval-and-replace)
+
+;; Faster search and replace
+(global-set-key (kbd "C-x C-a") 'query-replace-regexp) 
 
 ;; Paredit
 (add-hook 'emacs-lisp-mode-hook #'paredit-mode)
